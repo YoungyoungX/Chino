@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5B9DF2DCB0EC880EAB15C206553D97879E6FA03B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "5B9DF2DCB0EC880EAB15C206553D97879E6FA03B" : 9223372036854775807,
+    "20C9C97C69C08EE9CF7ED600CCD592A8D502EA54" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5BA8118F-0536-49FA-B9AA-9199C92237D2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "5B9DF2DCB0EC880EAB15C206553D97879E6FA03B" : "Chino\/",
+    "20C9C97C69C08EE9CF7ED600CCD592A8D502EA54" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Chino",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Chino.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/yangyang2016\/chino.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "20C9C97C69C08EE9CF7ED600CCD592A8D502EA54"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/YoungyoungX\/Chino.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5B9DF2DCB0EC880EAB15C206553D97879E6FA03B"
+    }
+  ]
+}

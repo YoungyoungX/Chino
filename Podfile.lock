@@ -25,11 +25,11 @@ PODS:
   - LeanCloud/Storage (10.0.0):
     - Alamofire (~> 4.2.0)
   - ReachabilitySwift (3)
-  - Realm (2.4.4):
-    - Realm/Headers (= 2.4.4)
-  - Realm/Headers (2.4.4)
-  - RealmSwift (2.4.4):
-    - Realm (= 2.4.4)
+  - Realm (2.5.0):
+    - Realm/Headers (= 2.5.0)
+  - Realm/Headers (2.5.0)
+  - RealmSwift (2.5.0):
+    - Realm (= 2.5.0)
   - StarWars (2.0)
   - SwiftyJSON (3.1.4)
   - TAPromotee (0.4.1):
@@ -62,8 +62,8 @@ SPEC CHECKSUMS:
   Kingfisher: 300035f9a40634dc9b452d946c9f22250688fecd
   LeanCloud: 0a6a0d52e33dd43d998ab256cc83f6c4954607b8
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
-  Realm: 5a280a1f5a9a3c267bebf4f41ee47911137703d7
-  RealmSwift: 0c02b9f2d4be4301c497ed10e53a0580584eb1dd
+  Realm: 62abce501668580092d2be9b6ba7324a3d5f906a
+  RealmSwift: 9f1a8f624f2f153410115c2cb7d486be9976565d
   StarWars: 3c68dc5e9f1b6ca6d407b1d4218fd8a65c2eacfa
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   TAPromotee: 7b0ae71f3350653fe9f224a5bb208aa23d484047
