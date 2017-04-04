@@ -17,16 +17,15 @@ target 'Chino' do
     # Pods for testing
   end
 
+platform :ios, '10.0'
+
 pod 'LeanCloud'
-pod 'Kingfisher'
-pod 'StarWars'
-pod 'TextFieldEffects'
 pod 'ReachabilitySwift'
-pod 'SwiftyJSON'
-pod 'CircleMenu'
-pod 'RealmSwift'
-pod 'TAPromotee'
 pod 'Firebase/Core'
 pod 'Firebase/AdMob'
+pod 'Firebase/Auth'
+pod 'GoogleSignIn'
+use_frameworks!
+pod 'Log'
 
 end

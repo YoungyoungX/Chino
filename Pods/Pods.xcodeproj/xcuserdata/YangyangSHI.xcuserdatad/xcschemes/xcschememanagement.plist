@@ -9,12 +9,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>CircleMenu.xcscheme</key>
+		<key>GTMOAuth2.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FXBlurView.xcscheme</key>
+		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -24,12 +24,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Kingfisher.xcscheme</key>
+		<key>LeanCloud.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>LeanCloud.xcscheme</key>
+		<key>Log.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -54,60 +54,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Realm.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>RealmSwift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>StarWars.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SwiftyJSON.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>TAPromotee.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>TextFieldEffects.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>00103D6C821BE85971C563025527BA5D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>005F5DA2F1BD03AF27A8FE7CE27302EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0F92B1FEC695D867ADFB14C5C271F3BD</key>
+		<key>0E50F7ECAAF825A7FA6E1636E80B52B3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1144EEE98E5E952939577757C917D3FB</key>
+		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>35EA1D3187DF720A5F575E6332B0F735</key>
+		<key>36BDBFF9AA4B788FEC5F33AC618AC4DC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,22 +82,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4701808FB2F9A789113CA487A7C8C4A8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>4FCB0C48F48E9C87D974F75DEC857FA2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5224371C6246F634A90261A7AFB1A7A2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>65EA36EDE8BFF9BF868CC6D965A65944</key>
+		<key>681BE6E3D02A43F9BA63777AC435C8FD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -142,27 +97,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BC94B37828563A5DB023CCA91DD75A56</key>
+		<key>B1C4AAFAF49036C7007633DAA3C806AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BD5BFC2F630B07DE8A20EBC90A7C8D49</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C4944FEC314D1A66588651D006273ADE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D5375F191E4234B2130ABB3834650957</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FE0EA4A854B31B97AB23A6135FCBFABD</key>
+		<key>D50A22EE6EEB19BCE674415D036706E4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

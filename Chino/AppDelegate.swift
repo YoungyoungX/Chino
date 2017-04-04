@@ -8,15 +8,29 @@
 
 import UIKit
 import Firebase
+import LeanCloud
+import Log
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        LeanCloud.initialize(applicationID: "CXpOF3j1YsiJUva4ih9onF7X-gzGzoHsz", applicationKey: "QywKTkz5YQJqMol75Tt27uR7")
         FIRApp.configure()//firebase
+        GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
+        let Log = Logger()
+        
+        Log.trace("Called!!!")
+        Log.debug("Who is self:", self)
+        Log.info()
+        Log.warning()
+        Log.error()
+
         return true
     }
 
@@ -42,6 +56,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+    }
+    
+    
+    //MARK: - GoogleSignIn
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            print("GoogleSignIn error : ", error.localizedDescription)
+            return
+        }else{
+            let userId = user.userID                  // For client-side use only!
+            let idToken = user.authentication.idToken // Safe to send to the server
+            let fullName = user.profile.name
+            let givenName = user.profile.givenName
+            let familyName = user.profile.familyName
+            let email = user.profile.email
+            Logger().debug("userId = ", userId!, "fullName", fullName!)
+            let authentication = user.authentication
+            let credential = FIRGoogleAuthProvider.credential(withIDToken: (authentication?.idToken)!,
+                                                              accessToken: (authentication?.accessToken)!)
+            FIRAuth.auth()?.signIn(with: credential) { (user, error) in
+                
+            }
+        }
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        Logger().debug("Did disconnect with")
+    }
+    
+    
 
 }
 

@@ -8,9 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		0460666D99629025F9C4508B /* Pods_Chino.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B377E03681E1B0933B31BD /* Pods_Chino.framework */; };
+		0F27D11F1E9017560010D43A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F27D11E1E9017560010D43A /* GoogleService-Info.plist */; };
+		0F297A0A1E91EDC800389586 /* usaMap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0F297A081E91EDC800389586 /* usaMap.jpg */; };
+		0F297A111E91FFD600389586 /* orientation.html in Resources */ = {isa = PBXBuildFile; fileRef = 0F297A101E91FFD600389586 /* orientation.html */; };
+		0F2A3BD71E9095D600230EA0 /* GoogleSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A3BD61E9095D600230EA0 /* GoogleSignInViewController.swift */; };
+		0F2A3BDB1E90E7D000230EA0 /* UploaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A3BDA1E90E7D000230EA0 /* UploaderViewController.swift */; };
+		0F2A3BDD1E90EFDD00230EA0 /* PinyinTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A3BDC1E90EFDD00230EA0 /* PinyinTool.swift */; };
+		0F2A3BE11E91355600230EA0 /* ChinoHanziModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2A3BE01E91355600230EA0 /* ChinoHanziModel.swift */; };
+		0F2B4CF71E9177B4002913B4 /* mostUsed1000.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0F2B4CF61E9177B4002913B4 /* mostUsed1000.txt */; };
+		0F2B4CFB1E918A25002913B4 /* ChinoWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2B4CFA1E918A25002913B4 /* ChinoWebViewController.swift */; };
+		0F50C0691E8C169F00E3C802 /* ChinoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F50C0681E8C169F00E3C802 /* ChinoCell.swift */; };
+		0F50C06B1E8C17E100E3C802 /* ChinoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F50C06A1E8C17E100E3C802 /* ChinoModel.swift */; };
+		0F50C06E1E8C22BA00E3C802 /* hanzi500.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0F50C06D1E8C22BA00E3C802 /* hanzi500.csv */; };
+		0F54032E1E8D764A00A39879 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F54032D1E8D764A00A39879 /* RegisterViewController.swift */; };
+		0F869D421E8C348E0080F95B /* HanziCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F869D411E8C348E0080F95B /* HanziCell.swift */; };
+		0FBFE98F1E8C2B20007CDF6A /* HanziModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBFE98E1E8C2B20007CDF6A /* HanziModel.swift */; };
 		4215D93969476F415C8A9F4E /* Pods_ChinoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33FDBA37963C282AB35646C7 /* Pods_ChinoUITests.framework */; };
 		710127E51E881A1D00FCAE04 /* UIColor+Chino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710127E41E881A1D00FCAE04 /* UIColor+Chino.swift */; };
-		71236C091E8809F900881400 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71236C081E8809F900881400 /* GoogleService-Info.plist */; };
 		71236C0C1E880DC400881400 /* Chino.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71236C0A1E880DC400881400 /* Chino.storyboard */; };
 		71236C0E1E880DDE00881400 /* Wiki.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71236C0D1E880DDE00881400 /* Wiki.storyboard */; };
 		71543B031E88004A00F86550 /* Reporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71543B021E88004A00F86550 /* Reporter.swift */; };
@@ -43,16 +57,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F1DDC351E9037FA00AFBF87 /* Chino-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Chino-Bridging-Header.h"; sourceTree = "<group>"; };
+		0F27D11E1E9017560010D43A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0F297A081E91EDC800389586 /* usaMap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = usaMap.jpg; sourceTree = "<group>"; };
+		0F297A101E91FFD600389586 /* orientation.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = orientation.html; sourceTree = "<group>"; };
+		0F2A3BD61E9095D600230EA0 /* GoogleSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleSignInViewController.swift; sourceTree = "<group>"; };
+		0F2A3BD81E90A07A00230EA0 /* Chino.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Chino.entitlements; sourceTree = "<group>"; };
+		0F2A3BDA1E90E7D000230EA0 /* UploaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploaderViewController.swift; sourceTree = "<group>"; };
+		0F2A3BDC1E90EFDD00230EA0 /* PinyinTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinyinTool.swift; sourceTree = "<group>"; };
+		0F2A3BE01E91355600230EA0 /* ChinoHanziModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChinoHanziModel.swift; sourceTree = "<group>"; };
+		0F2B4CF61E9177B4002913B4 /* mostUsed1000.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mostUsed1000.txt; sourceTree = "<group>"; };
+		0F2B4CFA1E918A25002913B4 /* ChinoWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChinoWebViewController.swift; sourceTree = "<group>"; };
+		0F50C0681E8C169F00E3C802 /* ChinoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChinoCell.swift; sourceTree = "<group>"; };
+		0F50C06A1E8C17E100E3C802 /* ChinoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChinoModel.swift; sourceTree = "<group>"; };
+		0F50C06D1E8C22BA00E3C802 /* hanzi500.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hanzi500.csv; sourceTree = "<group>"; };
+		0F54032D1E8D764A00A39879 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		0F869D411E8C348E0080F95B /* HanziCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HanziCell.swift; sourceTree = "<group>"; };
+		0FBFE98E1E8C2B20007CDF6A /* HanziModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HanziModel.swift; sourceTree = "<group>"; };
 		33FDBA37963C282AB35646C7 /* Pods_ChinoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChinoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		710127E41E881A1D00FCAE04 /* UIColor+Chino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Chino.swift"; sourceTree = "<group>"; };
-		71236C081E8809F900881400 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		71236C0B1E880DC400881400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Chino.storyboard; sourceTree = "<group>"; };
 		71236C0D1E880DDE00881400 /* Wiki.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Wiki.storyboard; sourceTree = "<group>"; };
 		71543B021E88004A00F86550 /* Reporter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reporter.swift; path = Utilities/Reporter.swift; sourceTree = "<group>"; };
 		71CD583D1E87FC7400C852B2 /* Chino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71CD58401E87FC7400C852B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71CD58421E87FC7400C852B2 /* ChinoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChinoViewController.swift; sourceTree = "<group>"; };
-		71CD58441E87FC7400C852B2 /* WikiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiViewController.swift; sourceTree = "<group>"; };
+		71CD58441E87FC7400C852B2 /* WikiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WikiViewController.swift; path = Chino/WikiViewController.swift; sourceTree = "<group>"; };
 		71CD58471E87FC7400C852B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		71CD58491E87FC7400C852B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71CD584C1E87FC7400C852B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -101,6 +131,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F297A0B1E91EDDF00389586 /* htmls */ = {
+			isa = PBXGroup;
+			children = (
+				0F297A101E91FFD600389586 /* orientation.html */,
+				0F297A081E91EDC800389586 /* usaMap.jpg */,
+			);
+			name = htmls;
+			sourceTree = "<group>";
+		};
+		0F2A3BD91E90E40800230EA0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				710127E41E881A1D00FCAE04 /* UIColor+Chino.swift */,
+				0F2A3BDC1E90EFDD00230EA0 /* PinyinTool.swift */,
+				71543B021E88004A00F86550 /* Reporter.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		0F2A3BE21E91611C00230EA0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				71CD58461E87FC7400C852B2 /* Main.storyboard */,
+				71236C0D1E880DDE00881400 /* Wiki.storyboard */,
+				71236C0A1E880DC400881400 /* Chino.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		0F50C0671E8C167200E3C802 /* Chino */ = {
+			isa = PBXGroup;
+			children = (
+				0F2A3BE01E91355600230EA0 /* ChinoHanziModel.swift */,
+				71CD58421E87FC7400C852B2 /* ChinoViewController.swift */,
+				0F50C0681E8C169F00E3C802 /* ChinoCell.swift */,
+				0F50C06A1E8C17E100E3C802 /* ChinoModel.swift */,
+				0F2A3BDA1E90E7D000230EA0 /* UploaderViewController.swift */,
+			);
+			name = Chino;
+			sourceTree = "<group>";
+		};
+		0F50C06C1E8C22AB00E3C802 /* database */ = {
+			isa = PBXGroup;
+			children = (
+				0F50C06D1E8C22BA00E3C802 /* hanzi500.csv */,
+				0F2B4CF61E9177B4002913B4 /* mostUsed1000.txt */,
+				0F297A0B1E91EDDF00389586 /* htmls */,
+			);
+			name = database;
+			sourceTree = "<group>";
+		};
+		0FBFE98D1E8C2B00007CDF6A /* Wiki */ = {
+			isa = PBXGroup;
+			children = (
+				0FBFE98E1E8C2B20007CDF6A /* HanziModel.swift */,
+				71CD58441E87FC7400C852B2 /* WikiViewController.swift */,
+				0F869D411E8C348E0080F95B /* HanziCell.swift */,
+				0F2A3BD61E9095D600230EA0 /* GoogleSignInViewController.swift */,
+				0F2B4CFA1E918A25002913B4 /* ChinoWebViewController.swift */,
+			);
+			name = Wiki;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		3D5D841841FC7C222898A853 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +221,7 @@
 		71CD58341E87FC7400C852B2 = {
 			isa = PBXGroup;
 			children = (
+				0F50C06C1E8C22AB00E3C802 /* database */,
 				71CD583F1E87FC7400C852B2 /* Chino */,
 				71CD58561E87FC7500C852B2 /* ChinoTests */,
 				71CD58611E87FC7500C852B2 /* ChinoUITests */,
@@ -149,18 +244,18 @@
 		71CD583F1E87FC7400C852B2 /* Chino */ = {
 			isa = PBXGroup;
 			children = (
+				0F2A3BD81E90A07A00230EA0 /* Chino.entitlements */,
+				0FBFE98D1E8C2B00007CDF6A /* Wiki */,
+				0F50C0671E8C167200E3C802 /* Chino */,
 				71CD58401E87FC7400C852B2 /* AppDelegate.swift */,
-				71CD58421E87FC7400C852B2 /* ChinoViewController.swift */,
-				71CD58441E87FC7400C852B2 /* WikiViewController.swift */,
-				71543B021E88004A00F86550 /* Reporter.swift */,
-				71CD58461E87FC7400C852B2 /* Main.storyboard */,
-				71236C0D1E880DDE00881400 /* Wiki.storyboard */,
-				71236C0A1E880DC400881400 /* Chino.storyboard */,
-				710127E41E881A1D00FCAE04 /* UIColor+Chino.swift */,
+				0F54032D1E8D764A00A39879 /* RegisterViewController.swift */,
+				0F2A3BE21E91611C00230EA0 /* Storyboards */,
+				0F2A3BD91E90E40800230EA0 /* Utilities */,
 				71CD58491E87FC7400C852B2 /* Assets.xcassets */,
 				71CD584B1E87FC7400C852B2 /* LaunchScreen.storyboard */,
 				71CD584E1E87FC7400C852B2 /* Info.plist */,
-				71236C081E8809F900881400 /* GoogleService-Info.plist */,
+				0F27D11E1E9017560010D43A /* GoogleService-Info.plist */,
+				0F1DDC351E9037FA00AFBF87 /* Chino-Bridging-Header.h */,
 			);
 			path = Chino;
 			sourceTree = "<group>";
@@ -261,7 +356,13 @@
 					71CD583C1E87FC7400C852B2 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = WNMEW7S4EG;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					71CD58521E87FC7500C852B2 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -302,12 +403,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F297A0A1E91EDC800389586 /* usaMap.jpg in Resources */,
 				71236C0C1E880DC400881400 /* Chino.storyboard in Resources */,
+				0F50C06E1E8C22BA00E3C802 /* hanzi500.csv in Resources */,
+				0F297A111E91FFD600389586 /* orientation.html in Resources */,
 				71CD584D1E87FC7400C852B2 /* LaunchScreen.storyboard in Resources */,
+				0F2B4CF71E9177B4002913B4 /* mostUsed1000.txt in Resources */,
 				71236C0E1E880DDE00881400 /* Wiki.storyboard in Resources */,
-				71236C091E8809F900881400 /* GoogleService-Info.plist in Resources */,
 				71CD584A1E87FC7400C852B2 /* Assets.xcassets in Resources */,
 				71CD58481E87FC7400C852B2 /* Main.storyboard in Resources */,
+				0F27D11F1E9017560010D43A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +460,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		395A2F9A4284BB646DF3EF12 /* [CP] Embed Pods Frameworks */ = {
@@ -430,7 +535,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F7B97CD667170E97A5654C7A /* [CP] Copy Pods Resources */ = {
@@ -460,7 +565,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -470,10 +575,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F2A3BDD1E90EFDD00230EA0 /* PinyinTool.swift in Sources */,
+				0F2A3BE11E91355600230EA0 /* ChinoHanziModel.swift in Sources */,
 				71543B031E88004A00F86550 /* Reporter.swift in Sources */,
+				0F54032E1E8D764A00A39879 /* RegisterViewController.swift in Sources */,
+				0F2A3BDB1E90E7D000230EA0 /* UploaderViewController.swift in Sources */,
 				710127E51E881A1D00FCAE04 /* UIColor+Chino.swift in Sources */,
 				71CD58451E87FC7400C852B2 /* WikiViewController.swift in Sources */,
+				0F50C0691E8C169F00E3C802 /* ChinoCell.swift in Sources */,
+				0F50C06B1E8C17E100E3C802 /* ChinoModel.swift in Sources */,
 				71CD58411E87FC7400C852B2 /* AppDelegate.swift in Sources */,
+				0F2B4CFB1E918A25002913B4 /* ChinoWebViewController.swift in Sources */,
+				0FBFE98F1E8C2B20007CDF6A /* HanziModel.swift in Sources */,
+				0F2A3BD71E9095D600230EA0 /* GoogleSignInViewController.swift in Sources */,
+				0F869D421E8C348E0080F95B /* HanziCell.swift in Sources */,
 				71CD58431E87FC7400C852B2 /* ChinoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -635,13 +750,26 @@
 			baseConfigurationReference = A1F3A9CE66CC8737A7731847 /* Pods-Chino.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Chino/Chino.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = WNMEW7S4EG;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Chino/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = come.shiyangyang.Chino;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "-UHYAUPEDP.com.shiyangyang.newchino";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Chino/Chino-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -650,13 +778,25 @@
 			baseConfigurationReference = DEB04CF356A4F55D43BBBE58 /* Pods-Chino.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Chino/Chino.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = WNMEW7S4EG;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Chino/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = come.shiyangyang.Chino;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "-UHYAUPEDP.com.shiyangyang.newchino";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Chino/Chino-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
