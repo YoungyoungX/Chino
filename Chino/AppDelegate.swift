@@ -24,13 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
         GIDSignIn.sharedInstance().clientID = FIRApp.defaultApp()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         let Log = Logger()
-        
-        Log.trace("Called!!!")
-        Log.debug("Who is self:", self)
-        Log.info()
-        Log.warning()
-        Log.error()
-
+        Log.debug("didFinishLaunchingWithOptions", self)
         return true
     }
 

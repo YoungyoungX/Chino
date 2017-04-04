@@ -22,6 +22,9 @@
 		0F50C06E1E8C22BA00E3C802 /* hanzi500.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0F50C06D1E8C22BA00E3C802 /* hanzi500.csv */; };
 		0F54032E1E8D764A00A39879 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F54032D1E8D764A00A39879 /* RegisterViewController.swift */; };
 		0F869D421E8C348E0080F95B /* HanziCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F869D411E8C348E0080F95B /* HanziCell.swift */; };
+		0F98ECF81E934525006B7FA3 /* WikiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98ECF71E934525006B7FA3 /* WikiCell.swift */; };
+		0F98ECFA1E9356ED006B7FA3 /* ChinoBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98ECF91E9356ED006B7FA3 /* ChinoBaseViewController.swift */; };
+		0F98ECFC1E93574E006B7FA3 /* HanziListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98ECFB1E93574E006B7FA3 /* HanziListViewController.swift */; };
 		0FBFE98F1E8C2B20007CDF6A /* HanziModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBFE98E1E8C2B20007CDF6A /* HanziModel.swift */; };
 		4215D93969476F415C8A9F4E /* Pods_ChinoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33FDBA37963C282AB35646C7 /* Pods_ChinoUITests.framework */; };
 		710127E51E881A1D00FCAE04 /* UIColor+Chino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710127E41E881A1D00FCAE04 /* UIColor+Chino.swift */; };
@@ -73,6 +76,9 @@
 		0F50C06D1E8C22BA00E3C802 /* hanzi500.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hanzi500.csv; sourceTree = "<group>"; };
 		0F54032D1E8D764A00A39879 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		0F869D411E8C348E0080F95B /* HanziCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HanziCell.swift; sourceTree = "<group>"; };
+		0F98ECF71E934525006B7FA3 /* WikiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiCell.swift; sourceTree = "<group>"; };
+		0F98ECF91E9356ED006B7FA3 /* ChinoBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChinoBaseViewController.swift; sourceTree = "<group>"; };
+		0F98ECFB1E93574E006B7FA3 /* HanziListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HanziListViewController.swift; path = Chino/HanziListViewController.swift; sourceTree = "<group>"; };
 		0FBFE98E1E8C2B20007CDF6A /* HanziModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HanziModel.swift; sourceTree = "<group>"; };
 		33FDBA37963C282AB35646C7 /* Pods_ChinoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChinoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		710127E41E881A1D00FCAE04 /* UIColor+Chino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Chino.swift"; sourceTree = "<group>"; };
@@ -183,14 +189,24 @@
 			name = database;
 			sourceTree = "<group>";
 		};
+		0F98ECF61E934171006B7FA3 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				0F2B4CFA1E918A25002913B4 /* ChinoWebViewController.swift */,
+			);
+			name = WebView;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		0FBFE98D1E8C2B00007CDF6A /* Wiki */ = {
 			isa = PBXGroup;
 			children = (
+				0F98ECFB1E93574E006B7FA3 /* HanziListViewController.swift */,
 				0FBFE98E1E8C2B20007CDF6A /* HanziModel.swift */,
 				71CD58441E87FC7400C852B2 /* WikiViewController.swift */,
+				0F98ECF71E934525006B7FA3 /* WikiCell.swift */,
 				0F869D411E8C348E0080F95B /* HanziCell.swift */,
 				0F2A3BD61E9095D600230EA0 /* GoogleSignInViewController.swift */,
-				0F2B4CFA1E918A25002913B4 /* ChinoWebViewController.swift */,
 			);
 			name = Wiki;
 			path = ..;
@@ -248,6 +264,8 @@
 			children = (
 				0F2A3BD81E90A07A00230EA0 /* Chino.entitlements */,
 				71CD58401E87FC7400C852B2 /* AppDelegate.swift */,
+				0F98ECF91E9356ED006B7FA3 /* ChinoBaseViewController.swift */,
+				0F98ECF61E934171006B7FA3 /* WebView */,
 				0FBFE98D1E8C2B00007CDF6A /* Wiki */,
 				0F50C0671E8C167200E3C802 /* Chino */,
 				0F54032D1E8D764A00A39879 /* RegisterViewController.swift */,
@@ -581,13 +599,16 @@
 				0F54032E1E8D764A00A39879 /* RegisterViewController.swift in Sources */,
 				0F2A3BDB1E90E7D000230EA0 /* UploaderViewController.swift in Sources */,
 				710127E51E881A1D00FCAE04 /* UIColor+Chino.swift in Sources */,
+				0F98ECFA1E9356ED006B7FA3 /* ChinoBaseViewController.swift in Sources */,
 				71CD58451E87FC7400C852B2 /* WikiViewController.swift in Sources */,
 				0F50C0691E8C169F00E3C802 /* ChinoCell.swift in Sources */,
 				0F50C06B1E8C17E100E3C802 /* ChinoModel.swift in Sources */,
 				71CD58411E87FC7400C852B2 /* AppDelegate.swift in Sources */,
+				0F98ECFC1E93574E006B7FA3 /* HanziListViewController.swift in Sources */,
 				0F2B4CFB1E918A25002913B4 /* ChinoWebViewController.swift in Sources */,
 				0FBFE98F1E8C2B20007CDF6A /* HanziModel.swift in Sources */,
 				0F2A3BD71E9095D600230EA0 /* GoogleSignInViewController.swift in Sources */,
+				0F98ECF81E934525006B7FA3 /* WikiCell.swift in Sources */,
 				0F869D421E8C348E0080F95B /* HanziCell.swift in Sources */,
 				71CD58431E87FC7400C852B2 /* ChinoViewController.swift in Sources */,
 			);

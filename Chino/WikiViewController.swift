@@ -14,21 +14,12 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
 
     @IBOutlet weak var mainCollection: UICollectionView!
 
-    private var hanziArray: Array<HanziModel>?
+    private var dataSource: Array<Dictionary<String, Any>>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        hanziArray = Array.init()
-        self.read500Hanzi()
-        
-        let storyboard = UIStoryboard.init(name: "Wiki", bundle: nil)
-        let webVC = storyboard.instantiateViewController(withIdentifier: "webVC") as! ChinoWebViewController
-        let filePath = Bundle.main.path(forResource: "orientation", ofType: "html")
-        Logger().debug("filePath = ", filePath!)
-        webVC.configUrl(url: URL.init(string: filePath!)!, or: "")
-        self.present(webVC, animated: false) { 
-            
-        }
-        
+        dataSource = Array.init()
+        self.getDataSource(local: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -40,10 +31,32 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
         // Dispose of any resources that can be recreated.
     }
     
-    func read500Hanzi() {
+    func getDataSource(local: Bool) {
+        if local {
+            var top100 = ["title":"Top 100 characters","body":"The most used and easist 100 Chinese characters.","action":"toHanzi100"]
+            self.dataSource.append(top100)
+            top100 = ["title":"Orientation","body":"Learn the orientation in Chinese(East, West, South, North)","action":"toOrientation"]
+            self.dataSource.append(top100)
+        }
+    }
+    
+    func openWebWith(url: URL, local: Bool) {//need set isLocal
+        let storyboard = UIStoryboard.init(name: "Wiki", bundle: nil)
+        let webVC = storyboard.instantiateViewController(withIdentifier: "webVC") as! ChinoWebViewController
+        Logger().debug("filePath = ", url)
+        webVC.configUrl(url: url, isLocal: local)
+        self.navigationController?.pushViewController(webVC, animated: true)
+    }
+    
+    
+    
+    func getHanzi(toNumber: NSNumber) -> Array<Any>{
+        var hanziArray = Array<Any>.init()
         let csvPath = Bundle.main.path(forResource: "hanzi500", ofType: "csv")
+        
         if csvPath == nil {
-            return
+            Logger().debug("The hanzi file path is nil.")
+            return hanziArray
         }
         var csvData: String? = nil
         do {
@@ -53,17 +66,17 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
                 if !row.isEmpty {
                     let components = row.components(separatedBy: ",")
                     let hanzi = HanziModel.init(id: components.first!, character: components[1], Pinyin: "NotDefined")
-                    hanziArray?.append(hanzi)
+                    hanziArray.append(hanzi)
+                    if hanziArray.count == toNumber.intValue {
+                        break
+                    }
                 }
             }
-            print("HanziArray count = " + String.init(describing: hanziArray?.count))
-            if (hanziArray?.count)! > 0 {
-                mainCollection.reloadData()
-            }
-            
+            print("HanziArray count = " + String.init(describing: hanziArray.count))
         } catch{
             print(error)
         }
+        return hanziArray
     }
     
     func fetchData() {
@@ -88,21 +101,26 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (hanziArray?.count)!
+        return (dataSource?.count)!
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "hanziCell", for: indexPath) as! HanziCell
-        let hanzi = hanziArray?[indexPath.row]
-        cell.lbHanzi.text = hanzi?.hanzi
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WikiCell", for: indexPath) as! WikiCell
+        let dict = self.dataSource[indexPath.row] as Dictionary
+        cell.configChinoColor(color: UIColor.dai, title: dict["title"] as! String, body: dict["body"] as! String)
+        
         return cell
     }
     
     //MARK: collectionView flowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellWidth = (collectionView.bounds.size.width - 10 * 5)/4
+        let cellWidth = (collectionView.bounds.size.width - 10 * 2)
         
-        return CGSize.init(width: cellWidth, height: cellWidth)
+        return CGSize.init(width: cellWidth, height: 100)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize.init(width: 0, height: 10)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -112,6 +130,24 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 10
+    }
+    
+    //MARK: collectionView delegate
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let dict = self.dataSource[indexPath.row]
+        let action = dict["action"] as! String
+        if action == "toHanzi100" {
+            let storyboard = UIStoryboard.init(name: "Wiki", bundle: nil)
+            let hanziVC = storyboard.instantiateViewController(withIdentifier: "HanziListViewController") as! HanziListViewController
+            hanziVC.configWithHanziSource(source: "Top100")
+            self.navigationController?.pushViewController(hanziVC, animated: true)
+            
+        }else if action == "toOrientation" {
+            let filePath = Bundle.main.path(forResource: "orientation", ofType: "html")
+            let localUrl = URL.init(string: filePath!)
+            self.openWebWith(url: localUrl!, local: true)
+        }
+        
     }
     
 }
