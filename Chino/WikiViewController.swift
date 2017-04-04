@@ -33,10 +33,10 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     func getDataSource(local: Bool) {
         if local {
-            var top100 = ["title":"Top 100 characters","body":"The most used and easist 100 Chinese characters.","action":"toHanzi100"]
-            self.dataSource.append(top100)
-            top100 = ["title":"Orientation","body":"Learn the orientation in Chinese(East, West, South, North)","action":"toOrientation"]
-            self.dataSource.append(top100)
+            let entry1 = ["title":"Top 100 characters","body":"The most used and easist 100 Chinese characters.","action":"toHanzi","toHanzi":100] as [String : Any]
+            let entry2 = ["title":"Top 500 characters","body":"Top 500 Chinos, take it easy!","action":"toHanzi","toHanzi":500] as [String : Any]
+            let entry3 = ["title":"Orientation","body":"Learn the orientation in Chinese(East, West, South, North)","action":"toLocalFile","toLocalFile":"orientation"]
+            self.dataSource = [entry1, entry2, entry3]
         }
     }
     
@@ -46,37 +46,6 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
         Logger().debug("filePath = ", url)
         webVC.configUrl(url: url, isLocal: local)
         self.navigationController?.pushViewController(webVC, animated: true)
-    }
-    
-    
-    
-    func getHanzi(toNumber: NSNumber) -> Array<Any>{
-        var hanziArray = Array<Any>.init()
-        let csvPath = Bundle.main.path(forResource: "hanzi500", ofType: "csv")
-        
-        if csvPath == nil {
-            Logger().debug("The hanzi file path is nil.")
-            return hanziArray
-        }
-        var csvData: String? = nil
-        do {
-            csvData = try String(contentsOfFile: csvPath!, encoding: String.Encoding.utf8)
-            let csv = csvData?.components(separatedBy: NSCharacterSet.whitespacesAndNewlines)
-            for row in csv!{
-                if !row.isEmpty {
-                    let components = row.components(separatedBy: ",")
-                    let hanzi = HanziModel.init(id: components.first!, character: components[1], Pinyin: "NotDefined")
-                    hanziArray.append(hanzi)
-                    if hanziArray.count == toNumber.intValue {
-                        break
-                    }
-                }
-            }
-            print("HanziArray count = " + String.init(describing: hanziArray.count))
-        } catch{
-            print(error)
-        }
-        return hanziArray
     }
     
     func fetchData() {
@@ -136,14 +105,14 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let dict = self.dataSource[indexPath.row]
         let action = dict["action"] as! String
-        if action == "toHanzi100" {
+        if action == "toHanzi" {
             let storyboard = UIStoryboard.init(name: "Wiki", bundle: nil)
             let hanziVC = storyboard.instantiateViewController(withIdentifier: "HanziListViewController") as! HanziListViewController
-            hanziVC.configWithHanziSource(source: "Top100")
+            hanziVC.configWithHanziTo(num: dict["toHanzi"] as! NSNumber)
             self.navigationController?.pushViewController(hanziVC, animated: true)
             
-        }else if action == "toOrientation" {
-            let filePath = Bundle.main.path(forResource: "orientation", ofType: "html")
+        }else if action == "toLocalFile" {
+            let filePath = Bundle.main.path(forResource: dict["toLocalFile"] as? String, ofType: "html")
             let localUrl = URL.init(string: filePath!)
             self.openWebWith(url: localUrl!, local: true)
         }

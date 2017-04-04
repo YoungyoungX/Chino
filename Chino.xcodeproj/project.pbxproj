@@ -19,12 +19,13 @@
 		0F2B4CFB1E918A25002913B4 /* ChinoWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2B4CFA1E918A25002913B4 /* ChinoWebViewController.swift */; };
 		0F50C0691E8C169F00E3C802 /* ChinoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F50C0681E8C169F00E3C802 /* ChinoCell.swift */; };
 		0F50C06B1E8C17E100E3C802 /* ChinoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F50C06A1E8C17E100E3C802 /* ChinoModel.swift */; };
-		0F50C06E1E8C22BA00E3C802 /* hanzi500.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0F50C06D1E8C22BA00E3C802 /* hanzi500.csv */; };
+		0F50C06E1E8C22BA00E3C802 /* Top500.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0F50C06D1E8C22BA00E3C802 /* Top500.csv */; };
 		0F54032E1E8D764A00A39879 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F54032D1E8D764A00A39879 /* RegisterViewController.swift */; };
 		0F869D421E8C348E0080F95B /* HanziCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F869D411E8C348E0080F95B /* HanziCell.swift */; };
 		0F98ECF81E934525006B7FA3 /* WikiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98ECF71E934525006B7FA3 /* WikiCell.swift */; };
 		0F98ECFA1E9356ED006B7FA3 /* ChinoBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98ECF91E9356ED006B7FA3 /* ChinoBaseViewController.swift */; };
 		0F98ECFC1E93574E006B7FA3 /* HanziListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F98ECFB1E93574E006B7FA3 /* HanziListViewController.swift */; };
+		0F98ECFE1E937CF4006B7FA3 /* Top100.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0F98ECFD1E937CF4006B7FA3 /* Top100.csv */; };
 		0FBFE98F1E8C2B20007CDF6A /* HanziModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBFE98E1E8C2B20007CDF6A /* HanziModel.swift */; };
 		4215D93969476F415C8A9F4E /* Pods_ChinoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33FDBA37963C282AB35646C7 /* Pods_ChinoUITests.framework */; };
 		710127E51E881A1D00FCAE04 /* UIColor+Chino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710127E41E881A1D00FCAE04 /* UIColor+Chino.swift */; };
@@ -73,12 +74,13 @@
 		0F2B4CFA1E918A25002913B4 /* ChinoWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChinoWebViewController.swift; sourceTree = "<group>"; };
 		0F50C0681E8C169F00E3C802 /* ChinoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChinoCell.swift; sourceTree = "<group>"; };
 		0F50C06A1E8C17E100E3C802 /* ChinoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChinoModel.swift; sourceTree = "<group>"; };
-		0F50C06D1E8C22BA00E3C802 /* hanzi500.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hanzi500.csv; sourceTree = "<group>"; };
+		0F50C06D1E8C22BA00E3C802 /* Top500.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Top500.csv; sourceTree = "<group>"; };
 		0F54032D1E8D764A00A39879 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		0F869D411E8C348E0080F95B /* HanziCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HanziCell.swift; sourceTree = "<group>"; };
 		0F98ECF71E934525006B7FA3 /* WikiCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiCell.swift; sourceTree = "<group>"; };
 		0F98ECF91E9356ED006B7FA3 /* ChinoBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChinoBaseViewController.swift; sourceTree = "<group>"; };
 		0F98ECFB1E93574E006B7FA3 /* HanziListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HanziListViewController.swift; path = Chino/HanziListViewController.swift; sourceTree = "<group>"; };
+		0F98ECFD1E937CF4006B7FA3 /* Top100.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Top100.csv; sourceTree = "<group>"; };
 		0FBFE98E1E8C2B20007CDF6A /* HanziModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HanziModel.swift; sourceTree = "<group>"; };
 		33FDBA37963C282AB35646C7 /* Pods_ChinoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChinoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		710127E41E881A1D00FCAE04 /* UIColor+Chino.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Chino.swift"; sourceTree = "<group>"; };
@@ -182,7 +184,8 @@
 		0F50C06C1E8C22AB00E3C802 /* database */ = {
 			isa = PBXGroup;
 			children = (
-				0F50C06D1E8C22BA00E3C802 /* hanzi500.csv */,
+				0F98ECFD1E937CF4006B7FA3 /* Top100.csv */,
+				0F50C06D1E8C22BA00E3C802 /* Top500.csv */,
 				0F2B4CF61E9177B4002913B4 /* mostUsed1000.txt */,
 				0F297A0B1E91EDDF00389586 /* htmls */,
 			);
@@ -423,7 +426,7 @@
 			files = (
 				0F297A0A1E91EDC800389586 /* usaMap.jpg in Resources */,
 				71236C0C1E880DC400881400 /* Chino.storyboard in Resources */,
-				0F50C06E1E8C22BA00E3C802 /* hanzi500.csv in Resources */,
+				0F50C06E1E8C22BA00E3C802 /* Top500.csv in Resources */,
 				0F297A111E91FFD600389586 /* orientation.html in Resources */,
 				71CD584D1E87FC7400C852B2 /* LaunchScreen.storyboard in Resources */,
 				0F2B4CF71E9177B4002913B4 /* mostUsed1000.txt in Resources */,
@@ -431,6 +434,7 @@
 				71CD584A1E87FC7400C852B2 /* Assets.xcassets in Resources */,
 				71CD58481E87FC7400C852B2 /* Main.storyboard in Resources */,
 				0F27D11F1E9017560010D43A /* GoogleService-Info.plist in Resources */,
+				0F98ECFE1E937CF4006B7FA3 /* Top100.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
