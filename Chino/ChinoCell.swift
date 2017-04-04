@@ -15,4 +15,18 @@ class ChinoCell: UICollectionViewCell {
     @IBOutlet weak var tvMain: UITextView!
     @IBOutlet weak var lbDate: UILabel!
     
+    func congifWithChinoModel(model: ChinoHanziModel, color: UIColor) {
+        self.colorLiner.backgroundColor = color
+        self.lbTitle.text = model.hanzi.value + " " + model.hanziPY.value
+        
+        var body = model.hanziEng.value + "\n" + model.words.value;
+        body = body + "\n" + model.wordsEng.value
+        self.tvMain.text = body
+        
+        if model.chinoDate != nil{
+            self.lbDate.text = model.chinoDate.value
+        }else{
+            self.lbDate.text = "某年某月某日"
+        }
+    }
 }

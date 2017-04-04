@@ -15,27 +15,31 @@ class FirstViewController: UIViewController, UICollectionViewDelegate, UICollect
 
     @IBOutlet weak var mainCollection: UICollectionView!
 
+    private var dataSource: Array<Any>!
+    
     private var nativeExpressView: GADNativeExpressAdView?
-    private var adArray: Array<Any>?
+    private var adLoaded: Bool!
+    private var adArray: Array<GADNativeExpressAdView>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.dataSource = Array.init()
         adArray = Array.init()
+        self.adLoaded = false
         mainCollection.backgroundColor = UIColor.chabai
         self.requestAdMobAd()
-        
+        self.fetchChinoDataFrom(date: LCDate.init())
 
     }
     
-    func fetchChinoDataFrom(date: NSData) {
-        let query = LCQuery(className: "ChinoData")
-        let date = LCDate.init()
+    func fetchChinoDataFrom(date: LCDate) {
+        let query = LCQuery(className: "ChinoHanziModel")
         query.whereKey("createdAt", .notEqualTo(date))
         query.find { result  in
             switch result {
             case .success(let objects):
-                print(objects.count)
+                self.dataSource = objects
+                self.mainCollection.reloadData()
             break // 查询成功
             case .failure(let error):
                 print(error)
@@ -70,22 +74,42 @@ class FirstViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     //MARK: CollectionView datasource
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1;
+//        let count = self.dataSource.count
+//        return count/12 + (count%12 > 0 ? 1 : 0);
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10;
+//        if section < section - 1 {
+//            return self.dataSource.count%12
+//        }
+//        return 13;
+        if self.dataSource.count <= 12 {
+            return self.dataSource.count
+        }
+        return self.dataSource.count + (self.adLoaded == true ? 1 : 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "chinoCell", for: indexPath) as! ChinoCell
-        if indexPath.row%5 == 0 && indexPath.row > 0 && (adArray?.count)! > 0 {
-            let adView = adArray![0] as! UIView
-            cell .addSubview(adView)
+        if self.adLoaded! && indexPath.row == 12 {
             cell.colorLiner.backgroundColor = UIColor.yingwulv
-            
+            cell.addSubview((self.adArray?[0])!)
+        }else{
+            var ROW = indexPath.row
+            if ROW > 12 {
+                ROW = ROW - (self.adLoaded! ? 1 : 0)
+            }
+            let model = self.dataSource[ROW] as! ChinoHanziModel
+            cell.congifWithChinoModel(model: model, color: UIColor.yanzhi)
         }
-        cell.layer.shadowColor = UIColor.dai.cgColor
+        
+        let shadowPath = UIBezierPath(rect: cell.bounds).cgPath
+        cell.layer.shadowColor = UIColor(white: 0.7, alpha: 0.7).cgColor
+        cell.layer.shadowOffset = CGSize.init(width: 2, height: 2)
+        cell.layer.shadowOpacity = 0.4
+        cell.layer.masksToBounds = false
+        cell.layer.shadowPath = shadowPath
         cell.layer.shadowOffset = CGSize.init(width: 1, height: 1)
         return cell;
         
@@ -99,7 +123,8 @@ class FirstViewController: UIViewController, UICollectionViewDelegate, UICollect
     //MARK: GADNativeExpressAdViewDelegate
     func nativeExpressAdViewDidReceiveAd(_ nativeExpressAdView: GADNativeExpressAdView) {
         adArray?.append(nativeExpressAdView)
-        mainCollection.reloadData()
+        self.adLoaded = true
+        self.mainCollection.reloadData()
     }
     
     func nativeExpressAdView(_ nativeExpressAdView: GADNativeExpressAdView, didFailToReceiveAdWithError error: GADRequestError) {
