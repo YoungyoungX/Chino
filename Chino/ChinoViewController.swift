@@ -9,43 +9,66 @@
 import UIKit
 import GoogleMobileAds
 import LeanCloud
+import ReachabilitySwift
 
 class FirstViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, GADNativeExpressAdViewDelegate {
 
 
     @IBOutlet weak var mainCollection: UICollectionView!
-
+    private var refreshControl: UIRefreshControl!
     private var dataSource: Array<Any>!
-    
     private var nativeExpressView: GADNativeExpressAdView?
     private var adLoaded: Bool!
     private var adArray: Array<GADNativeExpressAdView>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        refreshControl = UIRefreshControl.init()
+        refreshControl.addTarget(self, action:  #selector(self.refreshData), for: .valueChanged)
+        self.mainCollection.addSubview(refreshControl)
+        
         self.dataSource = Array.init()
         adArray = Array.init()
         self.adLoaded = false
         mainCollection.backgroundColor = UIColor.chabai
         self.requestAdMobAd()
-        self.fetchChinoDataFrom(date: LCDate.init())
-
+        self.refreshData()
     }
     
-    func fetchChinoDataFrom(date: LCDate) {
+    func fetchChinoDataFrom(chinoDate: LCNumber, complete:@escaping (_ success: Bool, _ dataArray: Array<Any>?)->Void) {
         let query = LCQuery(className: "ChinoHanziModel")
-        query.whereKey("createdAt", .notEqualTo(date))
+        query.whereKey("createdAt", .lessThan(LCDate.init(NSDate.init() as Date)))
+        query.whereKey("chinoDate", .descending)
+        query.limit = 30
         query.find { result  in
             switch result {
             case .success(let objects):
-                self.dataSource = objects
-                self.mainCollection.reloadData()
+                complete(true, objects)
             break // 查询成功
             case .failure(let error):
-                print(error)
+                print("FetchChinoData error: ", error)
+                complete(false, nil)
             }
         }
-
+        
+    }
+    
+    func refreshData() {
+        if (Reachability()?.isReachable)! {
+            self.fetchChinoDataFrom(chinoDate: 20170331, complete: {[unowned self] (success, dataArray) in
+                if success == true {
+                    self.dataSource = dataArray
+                    self.mainCollection.reloadData()
+                }else{
+                    print("empty")
+                }
+                self.refreshControl.endRefreshing()
+            })
+            
+        }else{
+            print("No net work")
+            self.refreshControl.endRefreshing()
+        }
     }
     
     func getLocalChinoData() {

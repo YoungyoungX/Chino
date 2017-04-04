@@ -17,7 +17,7 @@
                 <navigationController id="Ov0-PX-57m" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="yoM-eC-mBg"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="5IQ-5D-717">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="5IQ-5D-717">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

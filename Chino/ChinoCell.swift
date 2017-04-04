@@ -24,9 +24,11 @@ class ChinoCell: UICollectionViewCell {
         self.tvMain.text = body
         
         if model.chinoDate != nil{
-            self.lbDate.text = model.chinoDate.value
+            self.lbDate.text = HanziTool.dateToHanzi(date: NSNumber.init(value: model.chinoDate.value))
         }else{
             self.lbDate.text = "某年某月某日"
         }
     }
+    
+    
 }

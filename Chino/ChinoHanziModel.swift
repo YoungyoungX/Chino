@@ -21,7 +21,7 @@ class ChinoHanziModel: LCObject {
     dynamic var sentence: LCString!
     dynamic var sentencePY: LCString!
     dynamic var sentenceEng: LCString!
-    dynamic var chinoDate: LCString!
+    dynamic var chinoDate: LCNumber!
     
     override static func objectClassName() -> String {
         return "ChinoHanziModel"
