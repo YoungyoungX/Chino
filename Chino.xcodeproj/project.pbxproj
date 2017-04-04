@@ -84,7 +84,7 @@
 		71CD58421E87FC7400C852B2 /* ChinoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChinoViewController.swift; sourceTree = "<group>"; };
 		71CD58441E87FC7400C852B2 /* WikiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WikiViewController.swift; path = Chino/WikiViewController.swift; sourceTree = "<group>"; };
 		71CD58471E87FC7400C852B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		71CD58491E87FC7400C852B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		71CD58491E87FC7400C852B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Chino/Assets.xcassets; sourceTree = "<group>"; };
 		71CD584C1E87FC7400C852B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71CD584E1E87FC7400C852B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71CD58531E87FC7500C852B2 /* ChinoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChinoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,6 +156,7 @@
 				71CD58461E87FC7400C852B2 /* Main.storyboard */,
 				71236C0D1E880DDE00881400 /* Wiki.storyboard */,
 				71236C0A1E880DC400881400 /* Chino.storyboard */,
+				71CD584B1E87FC7400C852B2 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -221,6 +222,7 @@
 		71CD58341E87FC7400C852B2 = {
 			isa = PBXGroup;
 			children = (
+				71CD58491E87FC7400C852B2 /* Assets.xcassets */,
 				0F50C06C1E8C22AB00E3C802 /* database */,
 				71CD583F1E87FC7400C852B2 /* Chino */,
 				71CD58561E87FC7500C852B2 /* ChinoTests */,
@@ -245,14 +247,12 @@
 			isa = PBXGroup;
 			children = (
 				0F2A3BD81E90A07A00230EA0 /* Chino.entitlements */,
+				71CD58401E87FC7400C852B2 /* AppDelegate.swift */,
 				0FBFE98D1E8C2B00007CDF6A /* Wiki */,
 				0F50C0671E8C167200E3C802 /* Chino */,
-				71CD58401E87FC7400C852B2 /* AppDelegate.swift */,
 				0F54032D1E8D764A00A39879 /* RegisterViewController.swift */,
 				0F2A3BE21E91611C00230EA0 /* Storyboards */,
 				0F2A3BD91E90E40800230EA0 /* Utilities */,
-				71CD58491E87FC7400C852B2 /* Assets.xcassets */,
-				71CD584B1E87FC7400C852B2 /* LaunchScreen.storyboard */,
 				71CD584E1E87FC7400C852B2 /* Info.plist */,
 				0F27D11E1E9017560010D43A /* GoogleService-Info.plist */,
 				0F1DDC351E9037FA00AFBF87 /* Chino-Bridging-Header.h */,
